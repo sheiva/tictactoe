@@ -1,5 +1,4 @@
 var canvasSize = 500
-//var rectSize = canvasSize/3 -10;
 var rectSize = canvasSize/3 -5;
 
 function setup() {
