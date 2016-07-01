@@ -1,10 +1,4 @@
 var ticTacSquare = 500;
-var sidePadding = ticTacSquare/10;
-var topPadding = ticTacSquare/3;
-var ticTacSquareX = sidePadding / 2;
-var padding;
-var canvasSizeWidth = ticTacSquare + sidePadding;
-var canvasSizeHeight = ticTacSquare + topPadding;
 var thickstroke;
 var squareSize = ticTacSquare / 3;
 
@@ -13,15 +7,17 @@ var playerTurn = 1;
 
 function setup() {
   println("Hello World!")
-  createCanvas(canvasSizeWidth, canvasSizeHeight);
-  squares[0] = new Square(100, 100);
-  squares[1] = new Square(300, 300);
+  createCanvas(ticTacSquare, ticTacSquare);
+  //hard-coded test for two squares
+  squares[0] = new Square(50, 50);
+  squares[1] = new Square(250, 250);
   println(squares[0]);
   println(squares[1]);
 }
 
 function draw() {
   background(0);
+  //hard-coded test for two squares
   squares[0].displaySquareCorner(squares[0].x, squares[0].y, squareSize);
   squares[1].displaySquareCorner(squares[1].x, squares[1].y, squareSize);
 }
@@ -33,9 +29,9 @@ function mousePressed() {
 }
 
 function Square(x, y) {
-  this.x = y;
+  this.x = x;
   this.y = y;
-  this.pad = canvasSizeWidth / 20;
+  this.pad = ticTacSquare / 20;
   this.squareTaken = false;
   this.displayX = false;
   this.displayO = false;
