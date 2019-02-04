@@ -87,7 +87,7 @@ function Square(x, y) {
   this.displaySquareOutline = true;
   this.displaySquareOutlineStroke = 1;
   this.displaySquareCorner = function(x, y, squareSize) {
-    thickstroke = squareSize / 9;
+    thickstroke = squareSize / 10;
     this.x = x;
     this.y = y;
     if (developerMode === false) {
